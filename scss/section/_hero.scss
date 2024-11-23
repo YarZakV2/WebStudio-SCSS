@@ -1,5 +1,5 @@
 .hero {
-  background-color: var(--footer-background);
+  background-color: $footer-background;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -9,39 +9,45 @@
     ),
     url(../img/hero.jpg);
   background-repeat: no-repeat;
-}
-.hero-box {
-  position: relative;
-  text-align: center;
+
+
+ &__box {
+    position: relative;
+    text-align: center;
+  }
+  
+  &__title {
+    color: $main-background;
+    font-size: 44px;
+    width: 696px;
+    font-weight: 900;
+    line-height: 1.36;
+    letter-spacing: 2.64px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &__btn {
+    color: $main-background;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.96px;
+    background-color: $accent-color;
+    padding: 10px 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+
+    &:focus{
+      outline: auto;
+    }
+  }
 }
 
-.hero-title {
-  color: var(--main-background);
-  font-size: 44px;
-  width: 696px;
-  font-weight: 900;
-  line-height: 1.36;
-  letter-spacing: 2.64px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 30px;
-  margin-right: auto;
-  margin-left: auto;
-}
 
-.hero-btn {
-  color: var(--main-background);
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.87;
-  letter-spacing: 0.96px;
-  background-color: var(--accent-color);
-  padding: 10px 32px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-}
-.hero-btn:focus{
-  outline: auto;
-}
+
+

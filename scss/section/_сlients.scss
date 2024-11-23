@@ -1,59 +1,56 @@
-.сlients {
-  padding-bottom: 94px;
+.clients {
   padding-top: 94px;
-}
-.clients-title {
-  font-size: 36px;
-  font-weight: 700;
-  letter-spacing: 1.08px;
-  color: var(--text-color);
-  text-align: center;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 50px;
-}
-.clients-list {
-  display: flex;
-  justify-content: space-between;
-}
+  padding-bottom: 94px;
+  
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1.08px;
+    color: $text-color;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+  }
 
-.clients-item {
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  position: relative;
-}
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.clients-svg-link {
-  display: block;
-  height: 100%;
-  width: 100%;
-  padding: 16px 32px;
-  border: 1px solid transparent;
-  outline: none;
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+  &__item {
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    position: relative;
+  }
 
-.clients-svg-link:hover {
-  border-color: var(--accent-color);
-}
-.clients-svg-link:focus {
-  border-color: var(--accent-color);
-}
-.clients-svg-link:hover .clients-svg {
-  fill: var(--accent-color);
-}
+  &__link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 16px 32px;
+    border: 1px solid transparent;
+    outline: none;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-.clients-svg-link:focus .clients-svg {
-  fill: var(--accent-color);
-}
+    &:hover,
+    &:focus {
+      border-color: $accent-color;
 
-.clients-svg {
-  width: 106px;
-  height: 60px;
-  fill: var(--svg-color);
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      .clients__svg {
+        fill: $accent-color;
+      }
+    }
+  }
+
+  &__svg {
+    width: 106px;
+    height: 60px;
+    fill: $svg-color; 
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }

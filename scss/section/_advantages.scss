@@ -1,36 +1,44 @@
 .advantages {
   padding-top: 94px;
+  padding-bottom: 94px;
+
+  &__list {
+    gap: 30px;
+    display: flex;
+  }
+
+  &__box {
+    background-color:$team-background;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    padding:25px 100px;
+  }
+
+  &__svg {
+    width: 70px;
+    height: 70px;
+    fill: $text-color;
+ 
+  }
+
+  &__title {
+    color: $text-color;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: $additional-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.42px;
+  }
+
 }
 
-.advantages-list {
-  gap: 30px;
-  display: flex;
-}
-.advantage-box-svg {
-  background-color: var(--team-background);
-  border-radius: 4px;
-  margin-bottom: 30px;
-}
-.advantage-svg {
-  width: 70px;
-  height: 70px;
-  fill: var(--text-color);
-  margin: 25px 100px;
-}
-.advantages-title {
-  color: var(--text-color);
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
 
-.advantages-text {
-  color: var(--additional-color);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.71;
-  letter-spacing: 0.42px;
-}
