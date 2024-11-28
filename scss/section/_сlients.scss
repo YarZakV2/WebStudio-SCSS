@@ -14,7 +14,7 @@
   }
 
   &__list {
-    display: flex;
+    @include flexbox($align: stretch, $wrap: nowrap, $direction: row);
     justify-content: space-between;
   }
 

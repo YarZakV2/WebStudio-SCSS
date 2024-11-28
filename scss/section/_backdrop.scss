@@ -143,9 +143,7 @@
   }
 
   &__check {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox($wrap: nowrap, $direction: row);
     margin-bottom: 30px;
   }
 

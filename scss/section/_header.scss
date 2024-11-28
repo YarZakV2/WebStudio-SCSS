@@ -2,6 +2,7 @@
   padding-top: 24px;
   padding-bottom: 25px;
   position: relative;
+
   &::after {
     content: '';
     display: block;
@@ -15,22 +16,20 @@
  
 
   &__box {
-    display: flex;
-    align-items: center;
+    
+    @include flexbox($justify: flex-start, $wrap: nowrap);
   }
   &__logo {
     color: $logo-color;
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 26px;
+font-family: 'Raleway';
+    @extend %font;
     line-height: 1.38;
     letter-spacing: 0.78px;
   }
   &__span {
     color: $accent-color;
     font-family: 'Raleway';
-    font-size: 26px;
-    font-weight: 700;
+    @extend %font;
     line-height: 1.38;
     letter-spacing: 0.78px;
   }
@@ -38,7 +37,7 @@
     margin-left: 93px;
   }
   &__list {
-    display: flex;
+    @include flexbox($justify: flex-start, $align: stretch, $wrap: nowrap, $direction: row);
     gap: 50px;
     margin-left: auto;
   }
@@ -57,9 +56,7 @@
   }
   &__mail,
   &__phone {
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition-fill;
   }
   &__link {
     color: $additional-color;
@@ -67,11 +64,8 @@
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.28px;
-    display: flex;
-    align-items: center;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include flexbox($justify: flex-start, $wrap: nowrap, $direction: row);
+    @extend %transition-color;
     &:hover,
     &:focus {
       color: $accent-color;
@@ -89,12 +83,10 @@
 }
 
 .nav {
-  display: flex;
-  align-items: center;
   gap: 93px;
 
   &__list {
-    display: flex;
+    @include flexbox($justify: flex-start, $align: stretch, $wrap: nowrap, $direction: row);
     gap: 50px;
   }
 
@@ -107,7 +99,7 @@
     letter-spacing: 0.28px;
     display: flex;
     align-items: center;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 
     &:hover,
     &:focus {
@@ -125,7 +117,7 @@
       bottom: -34px;
       left: 0;
       opacity: 0;
-      transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      @extend %transition-opacity;
     }
 
     &:hover::after,

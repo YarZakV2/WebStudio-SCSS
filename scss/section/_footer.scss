@@ -6,8 +6,7 @@
   &__box {
     display: flex;
     gap: 70px;
-    justify-content: space-between;
-    align-items: flex-start;
+    @include flexbox($justify: space-between, $align: flex-start, $wrap: nowrap, $direction: row);
   }
 
   &__logo {
@@ -70,8 +69,7 @@
   }
 
   &__list-svg {
-    display: flex;
-    justify-content: center;
+    @include flexbox($align: stretch, $wrap: nowrap, $direction: row);
     gap: 10px;
     margin-bottom: 30px;
   }
@@ -81,9 +79,7 @@
     border-radius: 50%;
     width: 44px;
     height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox($wrap: nowrap, $direction: row);
     outline: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -115,7 +111,7 @@
   }
 
   &__box {
-    display: flex;
+    @include flexbox($justify: flex-start, $align: stretch, $wrap: nowrap, $direction: row);
   }
 
   &__input {

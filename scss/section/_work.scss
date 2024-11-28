@@ -10,7 +10,7 @@
     margin-bottom: 50px;
   }
    &__list {
-    display: flex;
+    @include flexbox($justify: flex-start, $align: stretch, $wrap: nowrap, $direction: row);
     gap: 30px;
   }
   &__item {
@@ -22,9 +22,7 @@
     width: 100%;
   }
   &__box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox($wrap: nowrap, $direction: row);
     position: relative;
     bottom: 70px;
     background-color: rgba(47, 48, 58, 0.8);

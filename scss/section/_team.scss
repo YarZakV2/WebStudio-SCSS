@@ -13,7 +13,7 @@
     margin-bottom: 50px;
   }
   &__list {
-    display: flex;
+    @include flexbox($justify: flex-start, $align: stretch, $wrap: nowrap, $direction: row);
     gap: 30px;
   }
   &__item {
@@ -48,8 +48,7 @@
     margin-bottom: 16px;
   }
   &__social-list {
-    display: flex;
-    justify-content: center;
+    @include flexbox($align: stretch, $wrap: nowrap, $direction: row);
     gap: 10px;
     margin-bottom: 30px;
   }
@@ -57,9 +56,7 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox($wrap: nowrap, $direction: row);
     outline: none;
     transition-property: background-color, fill;
     transition-duration: 250ms;
