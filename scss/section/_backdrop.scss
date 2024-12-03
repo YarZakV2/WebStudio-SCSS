@@ -53,9 +53,7 @@
     margin-top: 4px;
     margin-bottom: 10px;
     padding-left: 42px;
-    transition-property: border-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition-border-color;
 
     &:hover {
       border-color: $accent-color;
@@ -72,9 +70,7 @@
   }
 
   &__svg {
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition-fill;
 
     &:hover {
       fill: $accent-color;
@@ -128,9 +124,7 @@
     letter-spacing: 0.12px;
     display: block;
     margin-bottom: 20px;
-    transition-property: border-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition-border-color;
 
     &:focus {
       border-color: $accent-color;
