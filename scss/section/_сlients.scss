@@ -1,39 +1,63 @@
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
   &__title {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 700;
-    letter-spacing: 1.08px;
+    letter-spacing: 0.84px;
     color: $text-color;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+      letter-spacing: 1.08px;
+      margin-bottom: 50px;
+    }
   }
 
   &__list {
-    @include flexbox($align: stretch, $wrap: nowrap, $direction: row);
-    justify-content: space-between;
+    @include flexbox($align: stretch, $direction: row, $wrap: wrap, $justify: center);
+    gap: 30px;
+  
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap; 
+    }
   }
-
+  
   &__item {
-    border: 1px solid #afb1b8;
+    outline: 1px solid #afb1b8;
     border-radius: 4px;
-    position: relative;
-  }
-
+    flex-basis: calc((100% - 30px) / 2); // Для мобильной версии - 2 в строке
+    
+      @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 60px) / 3);
+      }
+    
+      @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 150px) / 6);
+      }
+    }
+    
   &__link {
-    display: block;
-    height: 100%;
     width: 100%;
-    padding: 16px 32px;
+    @include flexbox( $direction: row);
+    height: 92px;
     border: 1px solid transparent;
     outline: none;
     transition-property: border-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  
 
     &:hover,
     &:focus {
@@ -48,7 +72,7 @@
   &__svg {
     width: 106px;
     height: 60px;
-    fill: $svg-color; 
+    fill: $svg-color;
     @extend %transition-fill;
   }
 }
