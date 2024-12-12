@@ -2,10 +2,20 @@
   padding-top: 94px;
   padding-bottom: 94px;
   &__list {
-    @include flexbox($justify: flex-start, $align: stretch, $wrap: nowrap, $direction: row);
-    gap: 8px;
-    justify-content: center;
+    @include flexbox($justify: flex-start, $align: stretch, $direction: row);
+    row-gap: 15px;
     margin-bottom: 50px;
+    gap: 8px;
+    @media screen and (min-width: 480px) {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+     
+
+    }
+    @media screen and (min-width: 768px) {
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
   }
   &__btn {
     color: $text-color;
@@ -27,6 +37,7 @@
       box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1),
         0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
     }
+ 
   }
 }
 

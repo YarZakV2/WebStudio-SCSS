@@ -6,14 +6,25 @@
 
   .footer {
     &__box {
-      @include flexbox($justify: center, $align: center, $direction: column); 
+      @include flexbox($justify: space-between, $align: center);
   
-      @media screen and (min-width: 768px) {
-        justify-content: space-between;  
-        flex-direction: row; 
+      @media screen and (max-width: 768px) {
+        flex-direction: row;
+      }
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+      @media screen and (min-width: 1200px) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      @media screen and (max-width: 1200px) {
+       
+        justify-content: space-around;
       }
     }
   }
+  
   
 &__info{
   text-align: center;
@@ -68,7 +79,7 @@
     text-align: left;
   }
   &__social {
-    margin-top: 60px; 
+   
     @media screen and (min-width: 1200px) {
       margin-top: 12px;
     }
@@ -80,9 +91,16 @@
     letter-spacing: 0.42px;
     text-transform: uppercase;
     margin-bottom: 20px;
-    margin-top: auto;
+    margin-top: 60px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    @media screen and (min-width: 768px) {
+      margin-top: auto;
+    }
+   
+    @media screen and (max-width: 1200px) {
+      justify-content: center;
+    }
   }
 
   &__list-svg {
@@ -136,8 +154,13 @@
     text-transform: uppercase;
     margin-bottom: 20px;
     align-items: center;
-   
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      justify-content: flex-start;
+    }
   }
+  
 
   &__box {
     @include flexbox($justify: flex-start, $align: stretch, $wrap: nowrap, $direction: row);
@@ -150,7 +173,6 @@
 
   &__input {
     color: $footer-number-color;
-    width: 358px;
     height: 50px;
     font-size: 16px;
     font-weight: 400;
@@ -162,13 +184,18 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     outline: none;
     margin-right: 12px;
+    
 
-    @media screen and (max-width: 480px) {
+    @media screen and (min-width: 480px) {
       width: 450px;
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (min-width: 1200px) {
       width: 358px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      margin-right: 0;
     }
   }
 
