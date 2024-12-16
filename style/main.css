@@ -1184,6 +1184,11 @@ body {
     width: auto;
   }
 }
+@media screen and (max-width: 1200px) and (min-width: 768px) {
+  .project__item:nth-child(-n+2) {
+    height: 440px;
+  }
+}
 .project__box {
   padding: 20px 24px;
 }
