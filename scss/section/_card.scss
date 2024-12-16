@@ -5,7 +5,7 @@
     @include flexbox($justify: flex-start, $align: stretch, $direction: row);
     row-gap: 15px;
     margin-bottom: 50px;
-    gap: 8px;
+    column-gap: 8px;
     @media screen and (min-width: 480px) {
       justify-content: flex-start;
       flex-wrap: wrap;

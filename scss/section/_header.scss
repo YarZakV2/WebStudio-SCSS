@@ -24,8 +24,11 @@
   }
 
   &__box {
-    @include flexbox($justify: flex-start, $wrap: nowrap);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
+  
   &__logo {
     color: $logo-color;
     font-family: 'Raleway';
@@ -33,7 +36,7 @@
   font-size: 24px;
     line-height: 1.38;
     letter-spacing: 0.72px;
-    margin-right: 93px;
+    margin-right: auto;
     @media screen and (min-width: 768px) {
       margin-right: 88px;
     }
@@ -45,7 +48,22 @@
   }
   &__span {
     color: $accent-color;
+  }
 
+  
+
+  &__btn{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  &__menu{
+    width: 40px;
+    height: 40px;
+    fill: black;
   }
   
   &__list {
@@ -155,3 +173,4 @@
     }
   }
 }
+//======================================================================================================
