@@ -56,6 +56,7 @@
     border: none;
     background: transparent;
     cursor: pointer;
+    
     @media screen and (min-width: 768px) {
       display: none;
     }
@@ -63,7 +64,6 @@
   &__menu{
     width: 40px;
     height: 40px;
-    fill: black;
   }
   
   &__list {
@@ -173,4 +173,110 @@
     }
   }
 }
-//======================================================================================================
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $main-background;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.04), 0px 2px 4px 0px rgba(0, 0, 0, 0.08), 0px 1px 3px 0px rgba(0, 0, 0, 0.16);
+    padding: 48px 0px 48px 40px;
+    z-index: 1;
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__btn{
+    background: transparent;
+    position: absolute;
+    top: 10px; right: 15px;
+    border: none;
+  }
+  &__close{
+    width: 40px;
+    height: 40px;
+  fill: $logo-color;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    outline: none;
+  }
+  
+  }
+  &__item:first-child{
+    margin-bottom: 36px;
+  }
+  &__item:last-child{
+    margin-top: 32px;
+    margin-bottom: 200px;
+  }
+  &__link{
+color: $logo-color;
+font-size: 40px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.8px;
+&:hover,
+&:focus {
+  color: $accent-color;
+  outline: none;
+}
+  }
+
+  &__item-contact:first-child {
+    margin-bottom: 32px;
+    .menu__link-contact {
+      color: $accent-color;
+      font-size: 34px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.68px;
+    }
+  }
+
+  .menu__link-contact {
+color: $additional-color;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.48px;
+  }
+
+  &__list-social {
+    margin-top: 64px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px; 
+  }
+  
+  &__item-social {
+    position: relative;
+    display: flex; 
+    align-items: center; 
+  }
+  
+  &__item-social:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 100%;
+    background-color: rgba(33, 33, 33, 0.20);
+  }
+  
+  &__link-social {
+    color: $accent-color;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.36px;
+  }
+}
