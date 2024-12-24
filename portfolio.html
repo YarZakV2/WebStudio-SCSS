@@ -20,12 +20,13 @@
 			referrerpolicy="no-referrer"
 		/>
 	<link rel="stylesheet" href="./style/main.min.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	</head>
 	<body class="body">
 		<header class="header">
 
 			<div class="container header__box">
-				<a href="index.html" class="header__logo"><span class="header__span">Web</span>Studio</a>
+				<a href="index.html" class="header__logo" data-aos="zoom-in-down"><span class="header__span">Web</span>Studio</a>
 				
 				<button class="header__btn" data-modal-header-open>
 					<svg class="header__menu" >
@@ -34,19 +35,19 @@
 				</button>
 				<nav class="header__nav">
 					<ul class="nav__list">
-						<li class="nav__item">
+						<li class="nav__item" data-aos="zoom-in-down">
 							<a href="index.html" class="nav__link active">Студія</a>
 						</li>
-						<li class="nav__item">
+						<li class="nav__item" data-aos="zoom-in-down">
 							<a href="portfolio.html" class="nav__link">Портфоліо</a>
 						</li>
-						<li class="nav__item">
+						<li class="nav__item" data-aos="zoom-in-down">
 							<a href="#контакти" class="nav__link">Контакти</a>
 						</li>
 					</ul>
 				</nav>
 					<ul class="header__list ">
-						<li class="header__item">
+						<li class="header__item"data-aos="zoom-in-down">
 							<a href="mailto:info@devstudio.com" class="header__link">
 								<svg class="header__mail">
 									<use href="./img/symbol-defs.svg#icon-envelope"></use>
@@ -54,7 +55,7 @@
 							info@devstudio.com
 							</a>
 						</li>
-						<li class="header__item">
+						<li class="header__item"data-aos="zoom-in-down">
 							<a href="tel:380961111111" class="header__link">
 								<svg class="header__phone">
 									<use href="./img/symbol-defs.svg#icon-smartphone"></use>
@@ -71,7 +72,7 @@
 					</button>
 					<ul class="menu__list">
 						<li class="menu__item">
-							<a href="./index.html" class="menu__link">Студія</a></li>
+							<a href="./index.html" class="menu__link" >Студія</a></li>
 						<li class="menu__item">
 							<a href="./portfolio.html" class="menu__link">Портфоліо</a></li>
 						<li class="menu__item">
@@ -82,7 +83,7 @@
 						<li class="menu__item-contact"><a href="mailto:info@devstudio.com" class="menu__link-contact">info@devstudio.com</a></li>
 					</ul>
 					<ul class="menu__list-social">
-						<li class="menu__item-social"><a href="#" class="menu__link-social">Instagram</a></li>
+						<li class="menu__item-social"><a href="#" class="menu__link-social" >Instagram</a></li>
 						<li class="menu__item-social"><a href="#" class="menu__link-social">Twitter</a></li>
 						<li class="menu__item-social"><a href="#" class="menu__link-social">Facebook</a></li>
 						<li class="menu__item-social"><a href="#" class="menu__link-social">LinkedIn</a></li>
@@ -97,19 +98,19 @@
         <div class="container">
           <ul class="card__list">
             <li class="card__item">
-              <button type="button" class="card__btn">Усі</button>
+              <button type="button" class="card__btn"data-aos="zoom-in">Усі</button>
             </li>
             <li class="card__item">
-              <button type="button" class="card__btn">Веб-сайти</button>
+              <button type="button" class="card__btn"data-aos="zoom-in">Веб-сайти</button>
             </li>
             <li class="card__item">
-              <button type="button" class="card__btn">Додатки</button>
+              <button type="button" class="card__btn"data-aos="zoom-in">Додатки</button>
             </li>
             <li class="card__item">
-              <button type="button" class="card__btn">Дизайн</button>
+              <button type="button" class="card__btn"data-aos="zoom-in">Дизайн</button>
             </li>
             <li class="card__item">
-              <button type="button" class="card__btn">Маркетинг</button>
+              <button type="button" class="card__btn"data-aos="zoom-in">Маркетинг</button>
             </li>
           </ul>
 <section class="project">
@@ -246,8 +247,8 @@
       </section>
     </main>
 
-    <footer class="footer">
-			<div class="container footer__box">
+    <footer class="footer" >
+			<div class="container footer__box" data-aos="zoom-in">
 							<div class="footer__info">
 									<a href="#webstudio" class="footer__logo">
 											<span class="footer__logo-span">Web</span>Studio
@@ -315,5 +316,9 @@
 			</div>
 	</footer>
   <script src="./js/mobile-menu.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
   </body>
 </html>

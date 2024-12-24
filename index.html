@@ -20,12 +20,13 @@
 			referrerpolicy="no-referrer"
 		/>
 	<link rel="stylesheet" href="./style/main.min.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	</head>
 	<body class="body">
 		<header class="header">
 
 			<div class="container header__box">
-				<a href="index.html" class="header__logo"><span class="header__span">Web</span>Studio</a>
+				<a href="index.html" class="header__logo" data-aos="zoom-in-down"><span class="header__span">Web</span>Studio</a>
 				
 				<button class="header__btn" data-modal-header-open>
 					<svg class="header__menu" >
@@ -34,19 +35,19 @@
 				</button>
 				<nav class="header__nav">
 					<ul class="nav__list">
-						<li class="nav__item">
+						<li class="nav__item" data-aos="zoom-in-down">
 							<a href="index.html" class="nav__link active">Студія</a>
 						</li>
-						<li class="nav__item">
+						<li class="nav__item" data-aos="zoom-in-down">
 							<a href="portfolio.html" class="nav__link">Портфоліо</a>
 						</li>
-						<li class="nav__item">
+						<li class="nav__item" data-aos="zoom-in-down">
 							<a href="#контакти" class="nav__link">Контакти</a>
 						</li>
 					</ul>
 				</nav>
 					<ul class="header__list ">
-						<li class="header__item">
+						<li class="header__item"data-aos="zoom-in-down">
 							<a href="mailto:info@devstudio.com" class="header__link">
 								<svg class="header__mail">
 									<use href="./img/symbol-defs.svg#icon-envelope"></use>
@@ -54,7 +55,7 @@
 							info@devstudio.com
 							</a>
 						</li>
-						<li class="header__item">
+						<li class="header__item"data-aos="zoom-in-down">
 							<a href="tel:380961111111" class="header__link">
 								<svg class="header__phone">
 									<use href="./img/symbol-defs.svg#icon-smartphone"></use>
@@ -97,7 +98,7 @@
 			<section class="hero">
 				<div class="container hero__box">
 				<h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
-				<button type="button" class="hero__btn" data-modal-open>Замовити послугу </button>
+				<button type="button" class="hero__btn"  data-aos="flip-up" data-modal-open>Замовити послугу </button>
 			</section>
 		</div>
 			 <section class="advantages">
@@ -416,7 +417,7 @@
 		</main>
 
 		<footer class="footer">
-			<div class="container footer__box">
+			<div class="container footer__box" data-aos="zoom-in">
 							<div class="footer__info">
 									<a href="#webstudio" class="footer__logo">
 											<span class="footer__logo-span">Web</span>Studio
@@ -480,7 +481,6 @@
 											</di>
 									</form>
 							</div>
-
 			</div>
 	</footer>
 	
@@ -523,5 +523,9 @@
 		</button>-->
 		<script src="./js/modal.js"></script> 
 		<script src="./js/mobile-menu.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
 	</body>
 </html>
